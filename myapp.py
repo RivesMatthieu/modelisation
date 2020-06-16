@@ -14,7 +14,6 @@ class App:
     def __init__(self,X, Y, Z) :
         self.X = X
         self.Y = Y
-        self.Z = Z 
 
     def model_logisticRegression(X, Y) :
        logreg = LogisticRegression()
