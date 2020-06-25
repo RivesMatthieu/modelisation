@@ -17,9 +17,9 @@ for x in clean_df:
     if len(x) > 1:
         list_column.append(x)
         
-
 class model_logisticRegression(object):
     def __init__(self, X, y):
+
         self.X = X
         self.y = y
         logreg = LogisticRegression(penalty='none',solver='newton-cg')
@@ -32,7 +32,7 @@ class model_SVM(object):
         self.X = X
         self.y = y
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20)
-        svclassifier = SVC(kernel='linear') #linéaire -> linear / Noyau Gaussien -> rbf / Noyau sigmoîde -> sigmoid
+        svclassifier = SVC(kernel='linear')
         svclassifier.fit(X_train, y_train)
         y_pred = svclassifier.predict(X_test)
         confusion_matrix(y_test,y_pred)
